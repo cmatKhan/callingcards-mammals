@@ -33,13 +33,13 @@ WorkflowMain.initialise(workflow, params, log)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-include { CALLINGCARDS-MAMMALS } from './workflows/callingcards-mammals'
+include { CALLINGCARDS_MAMMALS } from './workflows/callingcards_mammals'
 
 //
 // WORKFLOW: Run main nf-core/callingcards-mammals analysis pipeline
 //
-workflow NFCORE_CALLINGCARDS-MAMMALS {
-    CALLINGCARDS-MAMMALS ()
+workflow NFCORE_CALLINGCARDS_MAMMALS {
+    CALLINGCARDS_MAMMALS ()
 }
 
 /*
@@ -53,7 +53,7 @@ workflow NFCORE_CALLINGCARDS-MAMMALS {
 // See: https://github.com/nf-core/rnaseq/issues/619
 //
 workflow {
-    NFCORE_CALLINGCARDS-MAMMALS ()
+    NFCORE_CALLINGCARDS_MAMMALS ()
 }
 
 /*
