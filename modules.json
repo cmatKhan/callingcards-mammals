@@ -13,6 +13,14 @@
                         "branch": "master",
                         "git_sha": "5e34754d42cd2d5d248ca8673c0a53cdf5624905"
                     },
+                    "bowtie2/align": {
+                        "branch": "master",
+                        "git_sha": "cf5b9c30a2adacc581793afb79fae5f5b50bed01"
+                    },
+                    "bowtie2/build": {
+                        "branch": "master",
+                        "git_sha": "e797efb47b0d3b2124753beb55dc83ab9512bceb"
+                    },
                     "bwa/aln": {
                         "branch": "master",
                         "git_sha": "277f4d693a00471690b66598d167bbca78bbe232"
@@ -20,6 +28,14 @@
                     "bwa/index": {
                         "branch": "master",
                         "git_sha": "9518fa4f65f3fb8cde24fde7d40333b39ec8fd65"
+                    },
+                    "bwa/sampe": {
+                        "branch": "master",
+                        "git_sha": "cf5b9c30a2adacc581793afb79fae5f5b50bed01"
+                    },
+                    "bwa/samse": {
+                        "branch": "master",
+                        "git_sha": "cf5b9c30a2adacc581793afb79fae5f5b50bed01"
                     },
                     "bwamem2/index": {
                         "branch": "master",
@@ -64,6 +80,10 @@
                     "samtools/index": {
                         "branch": "master",
                         "git_sha": "5e34754d42cd2d5d248ca8673c0a53cdf5624905"
+                    },
+                    "samtools/sort": {
+                        "branch": "master",
+                        "git_sha": "cf5b9c30a2adacc581793afb79fae5f5b50bed01"
                     },
                     "samtools/stats": {
                         "branch": "master",

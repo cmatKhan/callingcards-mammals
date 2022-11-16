@@ -111,7 +111,10 @@ workflow CALLINGCARDS_MAMMALS {
     //
     ALIGN (
         PREPARE_READS.out.reads,
-        PREPARE_GENOME.out.bwamem2_index
+        PREPARE_GENOME.out.bwamem2_index,
+        PREPARE_GENOME.out.bwa_aln_index,
+        PREPARE_GENOME.out.bowtie2_index,
+        PREPARE_GENOME.out.bowtie_index
     )
     ch_versions = ch_versions.mix(ALIGN.out.versions)
 
