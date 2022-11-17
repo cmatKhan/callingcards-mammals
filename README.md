@@ -34,8 +34,8 @@ On release, automated continuous integration tests run the pipeline on a full-si
     1. One of: [`bwamem2`](https://github.com/bwa-mem2/bwa-mem2),[`bwa`](https://bio-bwa.sourceforge.net/bwa.shtml),[`bowtie2`](https://bowtie-bio.sourceforge.net/bowtie2/index.shtml),[`bowtie`](https://bowtie-bio.sourceforge.net/index.shtml)
 1. Process Alignments
     1. Extract alignment QC metrics ([`Samtools`](https://www.htslib.org/), [`preseq`](http://smithlabresearch.org/software/preseq/))
-    1. Add Read Group and tags to alignment files ([custom script](https://github.com/cmatKhan/pycallingcards/tree/raw_processing))
-    1. Quantify transposon hops ([custom script](https://github.com/cmatKhan/pycallingcards/tree/raw_processing))
+    1. Add Read Group and tags to alignment files ([custom script](https://github.com/cmatKhan/pycallingcards/tree/raw_processing/pycallingcards/raw_processing))
+    1. Quantify transposon hops ([custom script](https://github.com/cmatKhan/pycallingcards/tree/raw_processing/pycallingcards/raw_processing))
 1. Present QC for raw read and alignment metrics ([`MultiQC`](http://multiqc.info/))
 
 ## Quick Start
