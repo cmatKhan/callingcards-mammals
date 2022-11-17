@@ -39,7 +39,6 @@ Next, copy and paste the script below into a file called, for example, `run_nf.s
 #SBATCH -o cc_nf_test.out
 
 # load system dependencies -- on HTCF, we use spack
-eval $(spack load --sh openjdk)
 eval $(spack load --sh singularityce@3.8.0)
 eval $(spack load --sh nextflow)
 
@@ -94,7 +93,7 @@ export NXF_SINGULARITY_CACHEDIR=singularity
 export SINGULARITY_TMPDIR=$tmp
 export SINGULARITY_CACHEDIR=$tmp
 
-nextflow run nf-core-callingcards-mammals  -profile test_human,singularity,htcf -resume
+nextflow run nf-core-callingcards-mammals -profile test_human,singularity,htcf -resume
 
 ```
 You'll run this with the command `.run_nf.sh` and the process logger will
