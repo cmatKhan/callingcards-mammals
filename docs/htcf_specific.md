@@ -49,6 +49,8 @@ mkdir singularity
 mkdir local_tmp
 
 export NXF_SINGULARITY_CACHEDIR=singularity
+export SINGULARITY_TMPDIR=$tmp
+export SINGULARITY_CACHEDIR=$tmp
 
 # if the repo is in this directory, then this relative path callingcards-mammals
 # will work. Otherwise, replace callingcards-mammals with the path, relative or
@@ -89,6 +91,8 @@ tmp=$(mktemp -d /tmp/$USER-singularity-XXXXXX)
 mkdir singularity
 
 export NXF_SINGULARITY_CACHEDIR=singularity
+export SINGULARITY_TMPDIR=$tmp
+export SINGULARITY_CACHEDIR=$tmp
 
 nextflow run nf-core-callingcards-mammals  -profile test_human,singularity,htcf -resume
 
