@@ -78,13 +78,13 @@ Specific instructions for running this on [HTCF are provided here](docs/htcf_spe
         -c local.config
    ```
 
-The `params.json` file is described in [usage](https://nf-co.re/callingcards/usage)
+The `params.json` file is described in [usage](docs/usage.md)
 Configuration is discussed in [Pipeline configuration](https://nf-co.re/usage/configuration) and
 in the [configuration section of the nextflow documentation](https://www.nextflow.io/docs/latest/config.html)
 
 ## Documentation
 
-The nf-core/callingcards pipeline comes with documentation about the pipeline [usage](https://nf-co.re/callingcards/usage), [parameters](https://nf-co.re/callingcards/parameters) and [output](https://nf-co.re/callingcards/output).
+The nf-core/callingcards pipeline comes with documentation about the pipeline [usage](docs/usage.md), [parameters](docs/parameters.md) and [output](docs/output.md).
 
 ## Credits
 
