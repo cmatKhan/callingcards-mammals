@@ -27,7 +27,7 @@ Alignment parameters
 
 | Parameter | Description | Type | Default | Required | Hidden |
 |-----------|-----------|-----------|-----------|-----------|-----------|
-| `aligner` | Choose one of the configured aligners. Defaults to bwamem2. | `string` | bwamem2 |  |  |
+| `aligner` | Choose one of the configured aligners: bwamem2, bwaaln, bowtie2, bowtie. Defaults to bwamem2. | `string` | bwamem2 |  |  |
 
 ## Input/output options
 
