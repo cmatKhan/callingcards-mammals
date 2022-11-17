@@ -40,7 +40,7 @@ On release, automated continuous integration tests run the pipeline on a full-si
 
 ## Quick Start
 
-Note that more detailed instructions are available in [usage](https://nf-co.re/callingcards/usage).
+Note that more detailed instructions are available in [usage](docs/usage.md).
 Specific instructions for running this on [HTCF are provided here](docs/htcf_specific.md)
 
 1. Install [`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation) (`>=21.10.3`)
