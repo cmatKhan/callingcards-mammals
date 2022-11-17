@@ -106,10 +106,6 @@ class RowChecker:
     def _validate_barcode(self, row):
         if len(row[self._barcode_col]) <= 0:
             raise AssertionError("Barcode details is required for each sample.")
-        if not os.path.exists(row[self._barcode_col]):
-            raise FileNotFoundError(f'Barcode details file '\
-                f'{row[self._barcode_col]} for sample '\
-                    f'{row[self._sample_col]} does not exist.')
         self._validate_barcode_format(row[self._barcode_col])
 
     def _validate_pair(self, row):

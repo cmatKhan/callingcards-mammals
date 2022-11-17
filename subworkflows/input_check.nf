@@ -32,18 +32,32 @@ def create_fastq_channel(LinkedHashMap row) {
     meta.id         = row.sample
     meta.single_end = row.single_end.toBoolean()
 
+    // this is done to make the test profiles work. test data are in the
+    // projectDir currently
+    def fastq_1 = file(row.fastq_1).exists() ?
+                    row.fastq_1 :
+                    "${projectDir}/${row.fastq_1}"
+
     // add path(s) of the fastq file(s) to the meta map
     def fastq_meta = []
-    if (!file(row.fastq_1).exists()) {
-        exit 1, "ERROR: Please check input samplesheet -> Read 1 FastQ file does not exist!\n${row.fastq_1}"
+    if (!file(fastq_1).exists()) {
+        if (!file(${projectDir}/fastq_1).exists)
+        exit 1, "ERROR: Please check input samplesheet -> Read 1 FastQ file does not exist!\n${fastq_1}"
     }
     if (meta.single_end) {
-        fastq_meta = [ meta, [ file(row.fastq_1) ] ]
+        fastq_meta = [ meta, [ file(fastq_1) ] ]
     } else {
-        if (!file(row.fastq_2).exists()) {
-            exit 1, "ERROR: Please check input samplesheet -> Read 2 FastQ file does not exist!\n${row.fastq_2}"
+    // this is done to make the test profiles work. test data are in the
+    // projectDir currently
+        def fastq_2 = file(row.fastq_2).exists() ?
+                row.fastq_2 :
+                "${projectDir}/${row.fastq_2}"
+
+        if (!file(fastq_2).exists()) {
+            exit 1, "ERROR: Please check input samplesheet -> Read 2 FastQ file does not exist!\n${fastq_2}"
         }
-        fastq_meta = [ meta, [ file(row.fastq_1), file(row.fastq_2) ], file(row.barcode_details) ]
+
+        fastq_meta = [ meta, [ file(fastq_1), file(fastq_2) ], file(barcode_details) ]
     }
     return fastq_meta
 }
@@ -55,11 +69,17 @@ def create_barcode_details_channel(LinkedHashMap row,reduce_to_se) {
     meta.id         = row.sample
     meta.single_end = !row.single_end.toBoolean() & reduce_to_se ? true : row.single_end.toBoolean()
 
+    // this is done to make the test profiles work. test data are in the
+    // projectDir currently
+    def barcode_details = file(row.barcode_details).exists() ?
+                    row.barcode_details :
+                    "${projectDir}/${row.barcode_details}"
+
     // add path(s) of the fastq file(s) to the meta map
     def barcode_details_meta = []
-    if (!file(row.barcode_details).exists()) {
-        exit 1, "ERROR: Please check input samplesheet -> barcode_details file does not exist!\n${row.barcode_details}"
+    if (!file(barcode_details).exists()) {
+        exit 1, "ERROR: Please check input samplesheet -> barcode_details file does not exist!\n${barcode_details}"
     }
-    barcode_details_meta = [ meta, [ file(row.barcode_details) ] ]
+    barcode_details_meta = [ meta, [ file(barcode_details) ] ]
     return barcode_details_meta
 }
