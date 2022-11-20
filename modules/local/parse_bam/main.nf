@@ -27,7 +27,7 @@ process PARSEBAM {
     -i $bam \
     -b $barcode_details \
     -g $fasta \
-    -l info 2> parse_bam.log
+    -l info ${args} 2> parse_bam.log
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
