@@ -36,13 +36,11 @@
                 },
                 "reduce_to_se": {
                     "type": "boolean",
-                    "default": true,
-                    "description": "Once barcodes are extracted, treat reads as single end from alignment step forward. Defaults to true"
+                    "description": "Once barcodes are extracted, treat reads as single end from alignment step forward. Defaults to false"
                 },
                 "r1_crop": {
                     "type": "integer",
-                    "default": 40,
-                    "description": "If SE or reduce_to_se is True, this option allows the user to crop the R1 read. This occurs after trimming. Defaults to 40"
+                    "description": "If SE or reduce_to_se is True, this option allows the user to crop the R1 read. This occurs after trimming"
                 }
             }
         },
